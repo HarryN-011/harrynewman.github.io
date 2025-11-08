@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects · Harry Newman</title>
+  <meta name="description" content="Portfolio projects: spreadsheets, dashboards, and controls." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <h1>Harry Newman · Accounting & Commerce Portfolio</h1>
+        </div>
+        <nav class="menu" role="navigation">
+          <a href="index.html">Home</a>
+          <a class="active" href="projects.html">Projects</a>
+          <a href="credentials.html">Credentials</a>
+          <a href="journal.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h3>Projects</h3>
+      <p class="meta">Evidence‑driven case cards with links to spreadsheets, dashboards, or PDFs. Replace "#" with your links.</p>
+      <div class="grid">
+        <article id="greenwave" class="card col-6 project">
+          <div class="ph" aria-label="Project cover"></div>
+          <h4>Greenwave Landscaping — FY2024–25 Financial Model</h4>
+          <p class="meta">Excel · Financial Statements · Indirect Cash Flow</p>
+          <p>Multi‑sheet model linking TB, IS, BS and CFS; quarterly dashboards; variance review; audit‑friendly structure with clear note trail.</p>
+          <div class="tags"><span class="tag">Excel</span><span class="tag">Accounting Cycle</span><span class="tag">Reporting</span></div>
+          <div class="stack-8">
+            <a class="btn" href="#">Excel / Google Drive</a>
+            <a class="btn" href="#">PDF Summary</a>
+          </div>
+        </article>
+
+        <article id="rtf" class="card col-6 project">
+          <div class="ph" aria-label="Project cover"></div>
+          <h4>5 COY RTF Inventory & Sales Tracker</h4>
+          <p class="meta">Google Sheets · Pivots · Automation</p>
+          <p>Structured tracker with dynamic product expansion, summary pivots, and a clean dashboard for non‑technical users.</p>
+          <div class="tags"><span class="tag">Spreadsheets</span><span class="tag">Automation</span><span class="tag">Dashboard</span></div>
+          <div class="stack-8">
+            <a class="btn" href="#">Google Sheet</a>
+            <a class="btn" href="#">Screenshots</a>
+          </div>
+        </article>
+
+        <article class="card col-6 project">
+          <div class="ph" aria-label="Project cover"></div>
+          <h4>Personal Finance Dashboard</h4>
+          <p class="meta">Power BI · DAX</p>
+          <p>Measures for Income, Expenses, Net Position & Running Net; visuals highlighting monthly trends and category breakdowns.</p>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Visuals</span></div>
+          <div class="stack-8">
+            <a class="btn" href="#">Power BI Service/PBIX</a>
+            <a class="btn" href="#">Image Preview</a>
+          </div>
+        </article>
+
+        <article class="card col-6 project">
+          <div class="ph" aria-label="Project cover"></div>
+          <h4>Compliance Mini‑Project (Club SOP)</h4>
+          <p class="meta">Policy · Controls · Documentation</p>
+          <p>Cash handling & approvals process; risks & mitigations; one‑page SOP and checklist for small teams.</p>
+          <div class="tags"><span class="tag">Controls</span><span class="tag">Risk</span><span class="tag">SOP</span></div>
+          <div class="stack-8">
+            <a class="btn" href="#">SOP PDF</a>
+            <a class="btn" href="#">Process Map</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="container">
+    <footer>© <span id="year"></span> Harry Newman.</footer>
+  </div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
