@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harry Newman | Commerce & Accounting Portfolio</title>
+  <meta name="description" content="Portfolio documenting study, projects, credentials and reflections for a career transition into accounting & commerce." />
+  <style>
+    :root{
+      --bg:#0f172a; /* slate-900 */
+      --panel:#111827; /* gray-900 */
+      --card:#0b1220; /* deep panel */
+      --text:#e5e7eb; /* gray-200 */
+      --muted:#94a3b8; /* slate-400 */
+      --accent:#38bdf8; /* sky-400 */
+      --accent-2:#a78bfa; /* violet-400 */
+      --ok:#34d399; /* emerald-400 */
+      --warn:#fbbf24; /* amber-400 */
+      --danger:#f87171; /* red-400 */
+      --border:rgba(148,163,184,.25);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#0a1222);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(15,23,42,.8);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border);z-index:20}
+    nav{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:12px 0}
+    .nav-links{display:flex;gap:14px;flex-wrap:wrap}
+    .nav-links a{padding:6px 10px;border-radius:10px;border:1px solid transparent}
+    .nav-links a:hover{border-color:var(--border);background:rgba(255,255,255,.03)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand .logo{width:32px;height:32px;border-radius:8px;background:radial-gradient(120% 120% at 10% 10%,var(--accent),transparent 40%),radial-gradient(120% 120% at 90% 80%,var(--accent-2),transparent 40%),#0b1220;border:1px solid var(--border)}
+    .brand h1{font-size:16px;margin:0;color:#fff}
+
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:40px 0}
+    .hero-card{background:linear-gradient(180deg,rgba(56,189,248,.06),rgba(167,139,250,.06));border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+    .hero h2{font-size:28px;margin:0 0 6px}
+    .hero p{color:var(--muted);margin:6px 0}
+    .badge{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--border);border-radius:999px;padding:6px 12px;font-size:12px;color:#cbd5e1;background:rgba(255,255,255,.03)}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+
+    section{padding:26px 0}
+    section h3{font-size:20px;margin:0 0 10px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .col-4{grid-column:span 4}
+    .col-6{grid-column:span 6}
+    .col-8{grid-column:span 8}
+    .col-12{grid-column:span 12}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.col-4,.col-6,.col-8,.col-12{grid-column:span 12}}
+
+    .card{background:linear-gradient(180deg,#0b1324,#0b0f1a);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .card h4{margin:0 0 6px;font-size:16px}
+    .meta{color:var(--muted);font-size:13px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{font-size:11px;padding:5px 10px;border-radius:999px;border:1px solid var(--border);color:#cbd5e1;background:rgba(255,255,255,.03)}
+
+    .list{display:grid;gap:10px}
+    .list-item{display:flex;justify-content:space-between;gap:14px;padding:12px;border:1px dashed var(--border);border-radius:12px}
+
+    .timeline{position:relative;display:grid;gap:14px}
+    .timeline:before{content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent),var(--accent-2));filter:opacity(.6)}
+    .t-item{position:relative;padding-left:36px}
+    .t-item:before{content:"";position:absolute;left:6px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(56,189,248,.2)}
+    .t-item small{color:var(--muted)}
+
+    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:12px;border:1px solid var(--border);background:#0b1220;padding:2px 6px;border-radius:6px;color:#e2e8f0}
+
+    .footer{margin:40px 0 20px;color:var(--muted);font-size:14px}
+
+    /* Print-friendly (for PDF export) */
+    @media print{
+      header, .nav-links{display:none}
+      body{background:#fff;color:#111}
+      .card,.hero-card{box-shadow:none;border-color:#e5e7eb}
+      a{color:#111}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <h1>Harry Newman — Accounting & Commerce Portfolio</h1>
+        </div>
+        <div class="nav-links" role="navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#learning">Learning Journey</a>
+          <a href="#credentials">Credentials</a>
+          <a href="#volunteer">Volunteer</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO / ABOUT -->
+    <section id="about" class="hero">
+      <div class="hero-card">
+        <span class="badge">Career Transition · Accounting & Financial Crime/Compliance</span>
+        <h2>Intelligence Analyst transitioning into Accounting & Finance</h2>
+        <p>
+          I’m building a professional portfolio to document my study, projects and reflections as I commence a Bachelor of Commerce (Accounting & Financial Crime & Compliance). This site is a living record of practical work, credentials, and learning milestones.
+        </p>
+        <div class="row" style="margin-top:10px">
+          <span class="tag">Excel • Power BI</span>
+          <span class="tag">Bookkeeping</span>
+          <span class="tag">Risk & Assurance</span>
+          <span class="tag">Data Visualisation</span>
+        </div>
+        <p class="meta" style="margin-top:8px">Tip: Replace this intro with your 2–3 sentence professional summary. Keep it tight and outcome‑focused.</p>
+      </div>
+      <div class="card">
+        <h4>Quick Stats</h4>
+        <div class="list">
+          <div class="list-item"><span>Current focus</span><span class="kbd">Foundation bookkeeping & study setup</span></div>
+          <div class="list-item"><span>Study mode</span><span class="kbd">Part‑time · 2 subjects/trimester</span></div>
+          <div class="list-item"><span>Weekly cadence</span><span class="kbd">3–4 short sessions (evenings)</span></div>
+          <div class="list-item"><span>Portfolio status</span><span class="kbd">Work in progress</span></div>
+        </div>
+        <p class="meta" style="margin-top:8px">You can turn this card into KPIs later (e.g., hours studied, projects shipped, credentials earned).</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h3>Featured Projects</h3>
+      <p class="meta">Showcase 3–6 items that demonstrate applied skills. Each card should link to a repo/file or a short case study page.</p>
+      <div class="grid">
+        <article class="card col-6">
+          <h4>Greenwave Landscaping – FY2024–25 Financial Model</h4>
+          <p class="meta">Excel • Financial Statements • Indirect Cash Flow</p>
+          <p>Built a multi‑sheet model (TB, IS, BS, CFS) with dynamic links and quarterly dashboards. Ensured balance integrity and added variance analysis.</p>
+          <div class="tags">
+            <span class="tag">Excel</span><span class="tag">Accounting Cycle</span><span class="tag">Data Integrity</span>
+          </div>
+          <p class="meta">Link: <em>Add file/repo or PDF summary</em></p>
+        </article>
+        <article class="card col-6">
+          <h4>5 COY RTF Inventory & Sales Tracker</h4>
+          <p class="meta">Excel/Google Sheets • Pivot & Automation</p>
+          <p>Designed a structured inventory tracker with dynamic product expansion, summary pivots, and clean dashboard for non‑technical users.</p>
+          <div class="tags">
+            <span class="tag">Spreadsheets</span><span class="tag">Automation</span><span class="tag">Dashboard</span>
+          </div>
+          <p class="meta">Link: <em>Add Google Sheet / screenshots</em></p>
+        </article>
+        <article class="card col-6">
+          <h4>Personal Finance Dashboard</h4>
+          <p class="meta">Power BI • Data Modelling • DAX</p>
+          <p>Imported a cash‑flow tracker, created measures (Income, Expenses, Net Position, Running Net Position), and built clean visuals for trends.</p>
+          <div class="tags">
+            <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Visual Design</span>
+          </div>
+          <p class="meta">Link: <em>Add PBIX or Power BI Service link</em></p>
+        </article>
+        <article class="card col-6">
+          <h4>Volunteer Bookkeeping Case Study</h4>
+          <p class="meta">Xero • Bank Recs • Reporting</p>
+          <p>Document the scope, approach and results: reconciliations, monthly reporting, and control improvements for an NFP or small club.</p>
+          <div class="tags">
+            <span class="tag">Xero</span><span class="tag">Controls</span><span class="tag">Reporting</span>
+          </div>
+          <p class="meta">Link: <em>Add write‑up (PDF/Notion)</em></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- LEARNING JOURNEY / TIMELINE -->
+    <section id="learning">
+      <h3>Learning Journey</h3>
+      <p class="meta">Log concise reflections by month/trimester. Use the categories (Accounting • Data • Tools • Career) to tag entries.</p>
+      <div class="timeline">
+        <div class="t-item card">
+          <strong>Nov 2025 — Portfolio foundation</strong>
+          <div class="tags"><span class="tag">Career</span><span class="tag">Tools</span></div>
+          <p>Defined portfolio structure, created sections, and seeded example projects. Set weekly study blocks and a reflection cadence.</p>
+          <small>Action: add first two reflections next week.</small>
+        </div>
+        <div class="t-item card">
+          <strong>Oct 2025 — Power BI session completed</strong>
+          <div class="tags"><span class="tag">Data</span><span class="tag">Power BI</span></div>
+          <p>Imported cash‑flow tracker, built DAX measures and visuals; planned donut chart for expenses vs income by category with monthly/yearly slicers.</p>
+          <small>Next: add summary label for period total.</small>
+        </div>
+        <div class="t-item card">
+          <strong>Sep 2025 — Xero Advisor Level 1 & 2</strong>
+          <div class="tags"><span class="tag">Accounting</span><span class="tag">Credentials</span></div>
+          <p>Completed Xero certifications, built a checklist for volunteer bookkeeping (bank feeds, chart of accounts, monthly reporting).</p>
+          <small>Artifact: upload certificates (PDF).</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section id="credentials">
+      <h3>Qualifications & Certificates</h3>
+      <div class="grid">
+        <div class="card col-4">
+          <h4>Xero Advisor — Level 1</h4>
+          <p class="meta">2025</p>
+          <p>Core Xero setup, bank reconciliation, basic reporting.</p>
+          <div class="tags"><span class="tag">Xero</span><span class="tag">Bookkeeping</span></div>
+        </div>
+        <div class="card col-4">
+          <h4>Xero Advisor — Level 2</h4>
+          <p class="meta">2025</p>
+          <p>Advanced reconciliation, reporting, and process controls.</p>
+          <div class="tags"><span class="tag">Controls</span><span class="tag">Reporting</span></div>
+        </div>
+        <div class="card col-4">
+          <h4>Power BI — Foundations</h4>
+          <p class="meta">2025</p>
+          <p>DAX measures, interactive visuals, data modelling basics.</p>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOLUNTEER -->
+    <section id="volunteer">
+      <h3>Volunteer Experience</h3>
+      <div class="grid">
+        <div class="card col-6">
+          <h4>Bookkeeping Assistant — NFP (Example)</h4>
+          <p class="meta">4–6 hrs/week · Remote/Onsite</p>
+          <ul>
+            <li>Bank recs in Xero; monthly P&L and balance sheet exports.</li>
+            <li>Maintained donor/customer records; updated chart of accounts.</li>
+            <li>Drafted a simple internal control checklist for small teams.</li>
+          </ul>
+          <p class="meta">Outcome: cleaner reporting cadence and clearer audit trail.</p>
+        </div>
+        <div class="card col-6">
+          <h4>Finance Admin — Sports Club (Example)</h4>
+          <p class="meta">Project based</p>
+          <ul>
+            <li>Standardised invoice and receipt templates; cloud filing.</li>
+            <li>Compiled quarterly summary with function‑ready charts.</li>
+          </ul>
+          <p class="meta">Outcome: reusable reporting pack for committees.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h3>Contact</h3>
+      <div class="card">
+        <p><strong>Email:</strong> <em>add your professional email</em></p>
+        <p><strong>LinkedIn:</strong> <em>add link</em> · <strong>Power BI Public:</strong> <em>add link</em> · <strong>GitHub/Drive:</strong> <em>add link</em></p>
+        <p class="meta">Tip: avoid personal details; keep to professional channels only.</p>
+      </div>
+    </section>
+
+    <div class="footer">© <span id="year"></span> Harry Newman. Built with a lightweight HTML template. Free to host on GitHub Pages or Netlify. Print this page to save a PDF snapshot for applications.</div>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Minimal JS only for dynamic year; the site is otherwise static and portable.
+  </script>
+
+  <!--
+  ──────────────────────────────────────────────────────────────────────────────
+  HOW TO USE / EDIT / HOST (quick notes)
+  1) Editing: Replace text in each section. Duplicate a <article class="card"> in Projects for each new project. Add new timeline entries by copying a .t-item block.
+  2) Evidence links: Point “Link:” rows to Google Drive/OneDrive files, GitHub repos, or Power BI Public reports.
+  3) Hosting (free):
+     • GitHub Pages — create a repo named <username>.github.io, upload this file as index.html, and it’s live.
+     • Netlify — drag‑and‑drop this file, instant HTTPS URL.
+     • Google Drive (public) — share a public link to the HTML (less ideal).
+  4) Print to PDF: Use the browser’s Print dialog for a clean PDF export (print styles included).
+  5) Accessibility: Use descriptive link text, keep headings in order, and prefer real text over images for content.
+  6) Versioning: Keep older snapshots in a /releases folder or change log to show growth over time.
+  ──────────────────────────────────────────────────────────────────────────────
+  -->
+</body>
+</html>
